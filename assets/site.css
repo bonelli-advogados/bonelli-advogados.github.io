@@ -148,6 +148,27 @@ dd { margin: 0; }
 /* Duas colunas genéricas */
 .duas { display: grid; gap: 32px; align-items: start; }
 
+/* Linha do tempo (anos no lugar dos números) */
+.linha-tempo li { grid-template-columns: 76px minmax(0, 1fr); }
+.linha-tempo .n { font-size: 30px; }
+
+/* Dados curtos (inscrição, áreas, escritório) */
+.mini-dados { display: grid; gap: 10px; margin: 0; }
+.mini-dados div { display: grid; gap: 2px; border-left: 2px solid var(--gold-text); padding-left: 12px; }
+.mini-dados dt { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.mini-dados dd { font-weight: 600; color: var(--navy); }
+
+/* Prazos e números longos na faixa azul */
+.fato-longo span { font-size: 16px; }
+
+/* Cartão de pessoa (equipe) */
+.pessoa { display: grid; gap: 18px; align-items: center; }
+.pessoa img { width: 100%; max-width: 280px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 2px; outline: 1px solid var(--gold-line); outline-offset: 6px; }
+.pessoa .pilha-p p { color: var(--text); }
+
+/* Página de erro */
+.erro { min-height: 50vh; display: flex; align-items: center; }
+
 /* Contato */
 .dados { display: grid; gap: 4px; font-size: 16px; }
 .dados dt { color: var(--muted); font-size: 14px; margin-top: 12px; }
@@ -186,10 +207,12 @@ dd { margin: 0; }
   .botoes { display: flex; flex-wrap: wrap; }
   .btn { display: inline-flex; }
   .lista-ouro { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .grade-2, .grade-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grade-2, .grade-3, .grade-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .fatos { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
   .fato b { font-size: 40px; }
   .dupla { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .mini-dados { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .pessoa { grid-template-columns: 220px minmax(0, 1fr); gap: 32px; }
   .form button { width: auto; align-self: flex-start; }
   .cartao .btn { align-self: flex-start; }
   .cartao, .form { padding: 32px; }
@@ -220,6 +243,8 @@ dd { margin: 0; }
   .lead { font-size: 19px; }
   .fato b { font-size: 48px; }
   .grade-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .grade-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .fatos-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .horas { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
   .duas { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 56px; }
   .etapas li { grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding: 20px 0; }
